@@ -1,0 +1,50 @@
+Project Structure - 2024-10-27-21-23-17
+Total Files: 5
+==================================================
+🗂️ root/
+   Files: 2
+   Size: 598 Bytes
+   Last Updated: Sun Oct 27 2024 15:30:02 GMT-0500 (Central Daylight Time)
+   File Types: {".js":1,".md":1}
+
+  🗂️ src/
+     Files: 0
+     Size: 0 Bytes
+
+    🗂️ config/
+       Files: 1
+       Size: 2 Bytes
+       Last Updated: Sun Oct 27 2024 15:30:28 GMT-0500 (Central Daylight Time)
+       File Types: {".js":1}
+      ⚡ google-drive.js
+         Size: 2 Bytes
+         Modified: Sun Oct 27 2024 15:30:28 GMT-0500 (Central Daylight Time)
+         Hash: f3b25701fe362ec84616a93a45ce9998
+
+    🗂️ public/
+       Files: 1
+       Size: 338 Bytes
+       Last Updated: Sun Oct 27 2024 15:32:38 GMT-0500 (Central Daylight Time)
+       File Types: {".html":1}
+      🌐 index.html
+         Size: 338 Bytes
+         Modified: Sun Oct 27 2024 15:32:38 GMT-0500 (Central Daylight Time)
+         Hash: 037aadf456954fe1a8fa1a545e3178a0
+
+    🗂️ routes/
+       Files: 1
+       Size: 6 Bytes
+       Last Updated: Sun Oct 27 2024 15:03:17 GMT-0500 (Central Daylight Time)
+       File Types: {".js":1}
+      ⚡ upload.js
+         Size: 6 Bytes
+         Modified: Sun Oct 27 2024 15:03:17 GMT-0500 (Central Daylight Time)
+         Hash: bea07e6d2b8dce396fe21baa61b34956
+  ⚡ index.js
+     Size: 504 Bytes
+     Modified: Sun Oct 27 2024 15:30:02 GMT-0500 (Central Daylight Time)
+     Hash: f1715848809e9cf621c884ac1e77256a
+  📝 README.md
+     Size: 94 Bytes
+     Modified: Sun Oct 27 2024 15:07:03 GMT-0500 (Central Daylight Time)
+     Hash: d4f2269bb35a4666ee3dde14aebe2b3b
