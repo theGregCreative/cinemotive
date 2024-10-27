@@ -3,6 +3,7 @@
 A web application for managing customer video content and metadata, with robust file tracking and deployment validation.
 
 ## 🚀 Project Structure
+```
 📁 root/
    📁 src/
       📁 config/
@@ -16,7 +17,7 @@ A web application for managing customer video content and metadata, with robust 
          ⚡ hierarchy.js      # Project structure analyzer
       📁 data/              # Generated backups and hierarchies
    ⚡ index.js             # Express server setup
-
+```
 
 ## 🛠️ Setup
 
