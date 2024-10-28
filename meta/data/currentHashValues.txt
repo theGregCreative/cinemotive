@@ -1,5 +1,5 @@
-Current Hash Values - 2024-10-28T03:45:31.666Z
-Total Files: 10
+Current Hash Values - 2024-10-28T13:16:48.102Z
+Total Files: 9
 ==================================================
 
 File: index.js
@@ -24,12 +24,6 @@ File: meta/scripts/hashingAround.js
 Size: 1.93 KB
 Last Modified: Sun Oct 27 2024 22:15:55 GMT-0500 (Central Daylight Time)
 Hash: ce5072ff4c0d1e0db30432723429f7e8
---------------------------------------------------
-
-File: meta/scripts/hierarchy.js
-Size: 7.81 KB
-Last Modified: Sun Oct 27 2024 16:23:08 GMT-0500 (Central Daylight Time)
-Hash: b2285d38a75665eaf74c57ab6a9e3294
 --------------------------------------------------
 
 File: meta/scripts/readGitHubHash.js
