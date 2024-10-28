@@ -1,9 +1,4 @@
 node_modules/
 .env
 .DS_Store
-<<<<<<< HEAD
 meta/data/
-=======
-meta/data/
->>>>>>> c35a031801f978c3a818e98af5476417c57c97a8
-
