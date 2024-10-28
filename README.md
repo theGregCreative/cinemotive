@@ -20,7 +20,7 @@ In a galaxy not so far away, a powerful web application was forged to bring bala
             ⚔️ hashInquisitor.js    # The Signature Forger
             🌐 gitHubInfiltrator.js # The Remote Essence Extractor
             ⚖️ hashAdjudicator.js   # The Supreme Arbiter
-   ⚡ index.js                # The Imperial Core
+   ⚡ index.js                # The Imperial Coregit 
 ```
 
 ## 🛠️ Establishing Your Command
