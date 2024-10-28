@@ -9,8 +9,24 @@ function generateHashes() {
     
     // Define what files to track
     const INCLUDE_EXTENSIONS = ['.js', '.html', '.css', '.md', '.env', '.gitignore'];
-    const EXCLUDE_DIRECTORIES = ['node_modules', '.git', 'meta/data', 'public/uploads', 'dist', 'build'];
+    
+    // Updated to properly catch meta/data path
+    const EXCLUDE_DIRECTORIES = [
+        'node_modules',
+        '.git',
+        path.join('meta', 'data').replace(/\\/g, '/'),  // Properly formatted path
+        'public/uploads',
+        'dist',
+        'build'
+    ];
+    
     const EXCLUDE_FILES = ['hashItUp.js']; // Exclude this script to prevent recursion
+
+    // Function to check if path should be excluded
+    function shouldExcludePath(filePath) {
+        const relativePath = path.relative(projectRoot, filePath).replace(/\\/g, '/');
+        return EXCLUDE_DIRECTORIES.some(dir => relativePath.startsWith(dir));
+    }
 
     // Get file hash
     function getFileHash(filePath) {
@@ -40,7 +56,8 @@ function generateHashes() {
             
             const fullPath = path.join(dirPath, file);
             
-            if (EXCLUDE_DIRECTORIES.some(dir => fullPath.includes(dir))) {
+            // Use new exclusion check
+            if (shouldExcludePath(fullPath)) {
                 return;
             }
 
