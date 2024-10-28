@@ -111,3 +111,57 @@ PORT=3000
 ## 📄 License
 
 ISC License
+
+## 🌑 The Dark Council
+
+The project is overseen by a powerful Dark Council, residing in `meta/scripts/`:
+
+```
+📁 meta/scripts/
+   ⚜️ hashImperator.js        # The Supreme Dark Lord - Orchestrates all hash operations
+   📚 darkArchives.js         # Master of Holocrons - Creates detailed backups
+   
+   📁 tools/                  # The Dark Council's Inner Sanctum
+      ⚔️ hashInquisitor.js    # Forges dark signatures for local files
+      🌐 gitHubInfiltrator.js # Extracts hash essences from GitHub
+      ⚖️ hashAdjudicator.js   # Passes judgment on file integrity
+```
+
+### 🦹 Dark Powers
+
+Each member of the council wields specific dark powers:
+
+#### The Supreme Dark Lord (hashImperator.js)
+- Orchestrates the triumvirate of hash validation
+- Commands the Hash Inquisitor for local signatures
+- Dispatches the GitHub Infiltrator for remote essences
+- Summons the Hash Adjudicator for final judgment
+
+#### Master of Holocrons (darkArchives.js)
+- Creates timestamped holocrons of the codebase
+- Measures the power of each artifact
+- Chronicles modifications and hierarchies
+- Preserves the essence of each file
+
+#### The Inner Sanctum (tools/)
+- **Hash Inquisitor**: Forges unique MD5 signatures
+- **GitHub Infiltrator**: Extracts hash essences from GitHub
+- **Hash Adjudicator**: Passes judgment on file integrity
+
+### 🚀 Summoning the Dark Council
+
+```bash
+# Initiate the grand ritual of hash validation
+node meta/scripts/hashImperator.js
+
+# Create holocrons of the codebase
+node meta/scripts/darkArchives.js
+```
+
+### 📜 Dark Artifacts
+
+All operations produce sacred artifacts in `meta/data/`:
+- Hash validation reports
+- File integrity judgments
+- Codebase holocrons
+- Hierarchical dark maps

@@ -22,6 +22,9 @@ const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
 
+// The project root - where our dark powers begin
+const projectRoot = path.join(__dirname, '..', '..', '..');
+
 // The sacred paths we shall monitor
 const INCLUDE_EXTENSIONS = ['.js', '.html', '.css', '.md', '.env', '.gitignore'];
 
@@ -36,7 +39,7 @@ const EXCLUDE_DIRECTORIES = [
 ];
 
 // Files granted immunity from our dark powers
-const EXCLUDE_FILES = ['hashItUp.js']; 
+const EXCLUDE_FILES = ['hashImperator.js']; 
 
 // Dark ritual to determine if a path is forbidden
 function shouldExcludePath(filePath) {
@@ -63,10 +66,75 @@ function formatBytes(bytes) {
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`;
 }
 
-[... rest of the code remains the same but we can add more themed comments if you'd like ...]
+// Dark ritual to gather all files in our domain
+function getAllFiles(dir) {
+    const artifacts = [];
+
+    function exploreRealm(currentPath) {
+        const items = fs.readdirSync(currentPath);
+
+        items.forEach(item => {
+            const fullPath = path.join(currentPath, item);
+            const stats = fs.statSync(fullPath);
+            const relativePath = path.relative(projectRoot, fullPath);
+
+            if (shouldExcludePath(fullPath) || EXCLUDE_FILES.includes(item)) {
+                return;
+            }
+
+            if (stats.isDirectory()) {
+                exploreRealm(fullPath);
+            } else if (INCLUDE_EXTENSIONS.includes(path.extname(item))) {
+                artifacts.push({
+                    path: relativePath,
+                    size: stats.size,
+                    modified: stats.mtime,
+                    hash: getFileHash(fullPath)
+                });
+            }
+        });
+    }
+
+    exploreRealm(dir);
+    return artifacts;
+}
+
+// Generate dark scrolls of our findings
+function generateHashes() {
+    try {
+        // Gather all artifacts
+        const artifacts = getAllFiles(projectRoot);
+
+        // Create the dark scroll content
+        const darkScroll = artifacts.map(file => [
+            `File: ${file.path}`,
+            `Size: ${formatBytes(file.size)}`,
+            `Modified: ${file.modified}`,
+            `Hash: ${file.hash}`,
+            '-'.repeat(50),
+            ''
+        ].join('\n')).join('\n');
+
+        // Ensure the Dark Archives exist
+        const darkArchives = path.join(projectRoot, 'meta', 'data');
+        if (!fs.existsSync(darkArchives)) {
+            fs.mkdirSync(darkArchives, { recursive: true });
+        }
+
+        // Seal the dark scroll
+        const outputPath = path.join(darkArchives, 'currentHashValues.txt');
+        fs.writeFileSync(outputPath, darkScroll);
+
+        console.log('\n🦹 Hash signatures have been forged!');
+        console.log(`📜 Dark scroll sealed in: ${outputPath}`);
+
+    } catch (error) {
+        console.error('💥 A disturbance in the force:', error.message);
+        process.exit(1);
+    }
+}
 
 // Begin the dark ritual
 console.log('🌑 Initiating the Dark Ritual of Hash Generation...');
 console.log('='.repeat(50));
 generateHashes();
-console.log('\n🦹 The Dark Ritual is complete. Inspect the scrolls in meta/data/currentHashValues.txt');
