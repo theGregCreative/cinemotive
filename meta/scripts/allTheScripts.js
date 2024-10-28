@@ -23,10 +23,10 @@ const INCLUDE_EXTENSIONS = [
 const EXCLUDE_DIRECTORIES = [
     'node_modules',
     '.git',
-    'meta',
-    'public/uploads',  // If you want to skip uploaded files
-    'dist',           // Built files
-    'build'           // Built files
+    'meta/data',    // Only exclude meta/data
+    'public/uploads',
+    'dist',
+    'build'
 ];
 
 // Function to check if file should be included
